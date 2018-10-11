@@ -1,0 +1,5 @@
+primitive/
+projects/*
+
+!projects/primitive.vcxproj
+!projects/primitive.vcxproj.filters
