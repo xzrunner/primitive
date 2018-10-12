@@ -1,5 +1,8 @@
 primitive/
+prim_test/
 projects/*
 
 !projects/primitive.vcxproj
 !projects/primitive.vcxproj.filters
+!projects/prim_test.vcxproj
+!projects/prim_test.vcxproj.filters
