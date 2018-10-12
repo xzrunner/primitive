@@ -38,6 +38,7 @@ Path& Path::LineTo(const sm::vec2& p)
 		m_curr_path.push_back(m_curr_pos);
 	}
 	m_curr_path.push_back(p);
+	m_curr_pos = p;
 
 	return *this;
 }

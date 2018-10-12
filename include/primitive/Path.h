@@ -22,7 +22,8 @@ public:
 	Path& Rect(const sm::vec2& left_bottom, float width, float height);
 
 	auto& GetPrevPaths() const { return m_prev_paths; }
-	auto& GetCurrPath() const { return m_curr_path; }
+	auto& GetCurrPos() const   { return m_curr_pos; }
+	auto& GetCurrPath() const  { return m_curr_path; }
 
 public:
 	struct SubPath
