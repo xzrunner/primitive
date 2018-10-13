@@ -22,7 +22,7 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>2.prim_test</ProjectName>
+    <ProjectName>1.prim_test</ProjectName>
     <ProjectGuid>{444A17AF-C0B6-45AE-A47D-8A23C413CDA9}</ProjectGuid>
     <RootNamespace>prim_test</RootNamespace>
     <Keyword>Win32Proj</Keyword>

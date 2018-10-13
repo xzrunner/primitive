@@ -11,17 +11,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\primitive\Palette.h" />
+    <ClInclude Include="..\..\..\include\primitive\Bezier.h" />
     <ClInclude Include="..\..\..\include\primitive\Path.h" />
-    <ClInclude Include="..\..\..\include\primitive\RenderNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\Palette.cpp" />
+    <ClCompile Include="..\..\..\source\Bezier.cpp" />
     <ClCompile Include="..\..\..\source\Path.cpp" />
-    <ClCompile Include="..\..\..\source\RenderNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectName>2.primitive</ProjectName>
+    <ProjectName>1.primitive</ProjectName>
     <ProjectGuid>{6CF78BA8-18DA-48A8-A7DE-C766F32B7A2D}</ProjectGuid>
     <RootNamespace>primitive</RootNamespace>
     <Keyword>Win32Proj</Keyword>
@@ -63,7 +61,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\cpputil\include;..\..\..\..\unirender\include;...\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -77,7 +75,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\cpputil\include;..\..\..\..\unirender\include;...\..\..\..\external\boost\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;__STDC_LIMIT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
