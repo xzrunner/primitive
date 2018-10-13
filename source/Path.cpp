@@ -1,4 +1,5 @@
 #include "primitive/Path.h"
+#include "primitive/Bezier.h"
 
 namespace prim
 {
@@ -45,11 +46,22 @@ Path& Path::LineTo(const sm::vec2& p)
 
 Path& Path::BezierCurveTo(const sm::vec2& cp1, const sm::vec2& cp2, const sm::vec2& p)
 {
+	if (m_curr_path.empty()) {
+		m_curr_path.push_back(m_curr_pos);
+	}
+
+	Bezier bz(m_curr_pos, cp1, cp2, p);
+	std::vector<sm::vec2> vertices;
+	bz.TransToPolyline(vertices);
+	std::copy(vertices.begin(), vertices.end(), std::back_inserter(m_curr_path));
+
 	return *this;
 }
 
 Path& Path::Arc(const sm::vec2& center, float radius, float start_angle, float end_angle, bool anticlockwise)
 {
+
+
 	return *this;
 }
 
