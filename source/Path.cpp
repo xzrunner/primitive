@@ -50,7 +50,7 @@ Path& Path::BezierCurveTo(const sm::vec2& cp1, const sm::vec2& cp2, const sm::ve
 		m_curr_path.push_back(m_curr_pos);
 	}
 
-	Bezier bz(m_curr_pos, cp1, cp2, p);
+	Bezier bz({ m_curr_pos, cp1, cp2, p });
 	std::vector<sm::vec2> vertices;
 	bz.TransToPolyline(vertices);
 	std::copy(vertices.begin(), vertices.end(), std::back_inserter(m_curr_path));
