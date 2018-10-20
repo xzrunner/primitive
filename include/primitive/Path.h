@@ -16,9 +16,9 @@ public:
 	Path& MoveTo(const sm::vec2& p);
 	Path& LineTo(const sm::vec2& p);
 	Path& BezierCurveTo(const sm::vec2& cp1, const sm::vec2& cp2, const sm::vec2& p);
-	Path& Arc(const sm::vec2& center, float radius, float start_angle, float end_angle, bool anticlockwise = false);
+	Path& Arc(const sm::vec2& center, float radius, float start_angle, float end_angle, size_t num_segments = 10);
 	Path& ArcTo(const sm::vec2& cp1, const sm::vec2& cp2, float radius);
-	Path& Ellipse(const sm::vec2& center, float radius_x, float radius_y, float rotation, float start_angle, float end_angle, bool anticlockwise = false);
+	Path& Ellipse(const sm::vec2& center, float radius_x, float radius_y, float rotation, float start_angle, float end_angle);
 	Path& Rect(const sm::vec2& left_bottom, float width, float height);
 
 	auto& GetPrevPaths() const { return m_prev_paths; }
