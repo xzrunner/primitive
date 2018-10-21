@@ -14,7 +14,7 @@ TEST_CASE("path")
 	auto& p_path = p.GetPrevPaths();
 	auto& c_pos  = p.GetCurrPos();
 	auto& c_path = p.GetCurrPath();
-	
+
 	p.MoveTo({ 1, 1 });
 	REQUIRE(p_path.empty());
 	REQUIRE(c_path.empty());
@@ -51,7 +51,7 @@ TEST_CASE("path")
 	REQUIRE(Approx(c_pos.x) == 12);
 	REQUIRE(Approx(c_pos.y) == 2);
 
-	SECTION("close") 
+	SECTION("close")
 	{
 		p.ClosePath();
 
@@ -92,7 +92,7 @@ TEST_CASE("path")
 	SECTION("rect")
 	{
 		p.Rect({ 25, 26 }, 5, 6);
-		
+
 		REQUIRE(p_path.size() == 2);
 		REQUIRE(p_path[0].vertices.size() == 2);
 		REQUIRE(p_path[1].vertices.size() == 2);
