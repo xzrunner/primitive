@@ -67,7 +67,7 @@ Path& Path::Arc(const sm::vec2& center, float radius, float start_angle, float e
 	}
 
 	m_curr_path.reserve(m_curr_path.size() + (num_segments + 1));
-	for (int i = 0; i <= num_segments; i++)
+	for (int i = 0; i <= static_cast<int>(num_segments); i++)
 	{
 		const float a = start_angle + ((float)i / (float)num_segments) * (end_angle - start_angle);
 		m_curr_path.push_back(sm::vec2(center.x + cosf(a) * radius, center.y + sinf(a) * radius));
