@@ -12,11 +12,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\primitive\Bezier.h" />
+    <ClInclude Include="..\..\..\include\primitive\Bitmap.h" />
     <ClInclude Include="..\..\..\include\primitive\Path.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\Bezier.cpp" />
     <ClCompile Include="..\..\..\source\Path.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\include\primitive\Bitmap.inl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectName>1.primitive</ProjectName>
