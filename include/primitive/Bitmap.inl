@@ -11,18 +11,13 @@ Bitmap<T>::Bitmap(size_t width, size_t height, size_t channels)
     , m_height(height)
     , m_channels(channels)
 {
-    m_values.resize(m_width * m_height * channels, 0);
+    m_pixels = new T[m_width * m_height * channels];
 }
 
 template <typename T>
-void Bitmap<T>::SetValues(const std::vector<T>& values)
+Bitmap<T>::~Bitmap()
 {
-    if (m_width * m_height * m_channels != values.size()) {
-        return;
-    }
-
-    assert(m_values.size() == values.size());
-    m_values = values;
+    delete[] m_pixels;
 }
 
 }
