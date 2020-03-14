@@ -11,7 +11,9 @@ Bitmap<T>::Bitmap(size_t width, size_t height, size_t channels)
     , m_height(height)
     , m_channels(channels)
 {
-    m_pixels = new T[m_width * m_height * channels];
+    auto sz = m_width * m_height * channels;
+    m_pixels = new T[sz];
+    memset(m_pixels, 0, sizeof(T) * sz);
 }
 
 template <typename T>
