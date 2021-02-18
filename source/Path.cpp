@@ -1,6 +1,8 @@
 #include "primitive/Path.h"
 #include "primitive/Bezier.h"
 
+#include <iterator>
+
 namespace prim
 {
 
