@@ -31,4 +31,9 @@ set(ALL_FILES
 
 add_library(${PROJECT_NAME} STATIC ${ALL_FILES})
 
-target_include_directories(${PROJECT_NAME} PRIVATE include external/sm)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+if(TARGET sm)
+    target_link_libraries(${PROJECT_NAME} PRIVATE sm)
+else()
+    target_include_directories(${PROJECT_NAME} PRIVATE external/sm)
+endif()
